@@ -1,0 +1,112 @@
+header {
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    color: #000;
+    font-size: 20px;
+    font-weight: 900;
+    transition: .3s;
+    width: 180px;
+    text-align: center;
+}
+header .logo:hover {
+    transform: scale(1.1);
+}
+nav, nav ul {
+    height: 100%;
+}
+
+.menu-link {
+    text-align: center;
+    text-decoration: none;
+}
+
+header nav ul li {
+    position: relative;
+    float: left;
+    height: 100%;
+}
+header nav ul li a {
+    color: #000;
+    font-size: 18px;
+    font-family: 400;
+    display: block;
+    height: 100%;
+    padding: 15px;
+}
+header nav ul li a:hover {
+    color: #fff;
+    background: #000;
+}
+header nav ul li label {
+    display: block;
+}
+nav ul li ul {
+    position: absolute;
+    left: 0;
+    width: 180px;
+}
+nav ul li ul li{
+    width: 100%;
+    background: #fff;
+}
+.icon {
+    width: 180px;
+}
+.icon div {
+    height: 6px;
+    margin: 6px auto;
+    width: 30px;
+    background: #000;
+    transition: 0.5s;
+    border-radius: 2px;
+}
+#submenu {
+    display: none;
+}
+input[type=checkbox]:checked + label > .middle {
+    opacity: 0;
+}
+input[type=checkbox]:checked + label > .top {
+    transform: rotate(315deg);
+    position: relative;
+    top: 12px;
+}
+input[type=checkbox]:checked + label > .bottom {
+    transform: rotate(-315deg);
+    position: relative;
+    top: -12px;
+}
+.submenu {
+    transition: 0.5s;
+    display: none;
+}
+input[type=checkbox]:checked ~ .submenu {
+    display: block;
+}
+
+.search-form {
+    width: 200px;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.search-button {
+    margin-left: 5px;
+    padding: 3px;
+    font-size: 15px;
+    width: 60px;
+    border-radius: 5px;
+    color: #fff;
+    background: #000;
+}
+.search-button:hover {
+    color: #000;
+    background: #fff;
+}

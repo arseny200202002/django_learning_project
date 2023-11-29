@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form class="form-group" action="{% url 'create_post' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="form-error">{{ form.non_fields_errors }}</div>
+
+        {% for field in form %}
+            <p><label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}: </label>{{ field }}</p>
+            <div class="form-error">{{ field.errors }}</div>
+        {% endfor %}
+
+        <button class="btn btn-primary" type="submit">Добавить</button>
+    </form>
+{% endblock %}

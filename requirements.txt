@@ -1,0 +1,5 @@
+django
+django-taggit
+django-autoslug
+django-crispy-forms
+crispy-bootstrap5

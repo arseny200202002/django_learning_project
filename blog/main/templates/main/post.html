@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="post-detailed">
+        <h2>{{ post.title }}</h2><br>
+        <p>{{ post.description }}</p><br>
+        <p>{{ post.content|linebreaks }}</p><br>
+
+        {% for tag in tags %}
+        <a href="{{ tag.get_absolute_url }}" class="tag">{{ tag.name }}</a>
+        {% endfor %}
+
+        <p>Статья опубликована: {{ post.time_create }}</p><br>
+    </div>
+    <div class="comments">
+        {% if user.is_authenticated %}
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Отправить</button>
+        </form>
+        {% endif %}
+        <h1>комментарии</h1>
+        <ul>
+            {% for comment in comments %}
+            <li>
+                {% if comment.author == user %}
+                <p class="user-message"><a class="user-link" href="{{ comment.get_absolute_url }}">{{ comment.author }}</a> {{ comment.text }}</p>
+                {% else %}
+                <p><a class="user-link" href="{{ comment.get_absolute_url }}">{{ comment.author }}</a>: {{ comment.text }}</p>
+                {% endif %}
+                <p>{{ comment.time_create }}</p>
+            </li><br>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

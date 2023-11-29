@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background: rgb(100, 100, 100);
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+.wrapper {
+    width: 1000px;
+    margin: 0 auto;
+}
+.main {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 30px;
+    background: #c4c1c1;
+    height: 100vh;
+}

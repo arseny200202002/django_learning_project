@@ -1,0 +1,47 @@
+.post-detailed, .comments {
+    width: 80%;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.post-detailed h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.comments {
+    margin-top: 10px;
+}
+.user-message {
+    color: red;
+}
+.user-link {
+    color: rgb(64, 64, 199);
+    font-size: 20px;
+    font-weight: 400;
+}
+.user-link:hover {
+    color: rgb(209, 165, 6);
+}
+.tag {
+    background: rgb(84, 64, 192);
+    color: #fff;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+}
+.tag:hover {
+    background: #caca44;
+}
+
+.column-checkbox {
+    padding-top: 20px;
+}
+
+.column-checkbox .checkbox {
+    display: block;
+    float: left;
+    width: 25%;
+}

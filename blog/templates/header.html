@@ -1,0 +1,27 @@
+<a href="{% url 'home' %}" class="logo">LOGO</a>
+<form class="search" action="{% url 'search' %}" method="post">
+    {% csrf_token %}
+    {{ search_form.title }}
+    <button class="search-button" type="submit">Поиск</button>
+</form>
+
+<nav>
+    <ul>
+        {% for m in menu %}
+        <li><a class="menu-link" href="{% url m.url_name %}">{{ m.title }}</a></li>
+        {% endfor %}
+        <li>
+            <input type="checkbox" id="submenu">
+            <label class="icon" for="submenu">
+                <div class="top"></div>
+                <div class="middle"></div>
+                <div class="bottom"></div>
+            </label>
+            <ul class="submenu">
+                {% for s in submenu %}
+                <li><a class="menu-link" href="{% url s.url_name %}">{{ s.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </li>
+    </ul>
+</nav>
